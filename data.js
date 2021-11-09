@@ -3,18 +3,16 @@ const products = [
       id: 0,
       name: "T-shirt 1",
       price: 29.99,
-      instock: 100,
-      description:
-        "instock: 100",
+      instock: 9,
+      description: "inventory : 9",
       imgSrc: "./img/t1.png",
     },
     {
       id: 1,
       name: "T-shirt 2",
       price: 24.99,
-      instock: 43,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
+      instock: 8,
+      description: "inventory : 8",
       imgSrc: "./img/t2.png",
     },
     {
@@ -48,7 +46,7 @@ const products = [
       id: 5,
       name: "T-shirt 6",
       price: 39.99,
-      instock: 40,
+      instock: 7,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
       imgSrc: "./img/t6.png",

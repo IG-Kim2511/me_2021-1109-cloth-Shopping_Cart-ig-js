@@ -1,0 +1,61 @@
+
+/* VARIABLES */
+:root {
+    --bg-color: #fff;
+    --link-color: #000;
+    --link-size: 1.1rem;
+    --right-side-bg-color: #446df6;
+}
+
+/* General CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* APP CONTAINER */
+.app-container {
+    width: 100vw;
+    height: 100vh;
+}
+  
+
+.world {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+}
+
+.app-bg .left-side {
+    background-color: var(--bg-color);
+    width: 75%;
+    height: 100%;    
+}
+
+.app-bg .right-side {
+    background-color: var(--right-side-bg-color);
+    width: 25%;
+    height: 100%;
+}
