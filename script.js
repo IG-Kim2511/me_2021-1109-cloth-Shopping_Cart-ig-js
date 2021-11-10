@@ -92,13 +92,18 @@ function addToCart(p_id) {
 
 function updateCart() {
     renderCartItems();
+    renderSubtotal();
     
 }
 
 // 🍀renderCartItems :  cart에 아이템 render
+/* 
+onclick "changeNumberOfUnits" - 🍖js2830
+*/
 
 function renderCartItems() {
-    cartItemsEl.innerHTML="";
+    cartItemsEl.innerHTML=""; /* 클릭할때마다 초기화 */
+
     cart.forEach((pp_item)=>{
         cartItemsEl.innerHTML += `
             <div class="cart-item">
@@ -119,8 +124,41 @@ function renderCartItems() {
     });
 }
 
+// 🍀js2830. + - 버튼 클릭한때, change Number Of Units, 
+/* 🍄
+10. cart 안의 item.id === onclick으로 넘어온 id가 같다면...함수실행
 
-// 🍀changeNumberOfUnits
-function changeNumberOfUnits(params) {
+ 10-10. minus + 1보다 큰때에만 적용
+
+ 10-20. plus + instock보다 작을때에만 적용
+
+20.다르면 return : 바뀌지않은 이전 numberOfUnit그대로 유지
+*/
+function changeNumberOfUnits(p_action,p_id) {
+    cart = cart.map((pp_item)=>{
+        let numberOfUnits = pp_item.numberOfUnits;
+
+        if (pp_item === p_id) {
+            if (p_action === "minus" && numberOfUnits > 1) {
+                numberOfUnits--;
+                
+            } else if (p_action === "plus" && numberOfUnits < pp_item.instock) {
+                numberOfUnits++;                
+            }
+        }
+
+        return {
+            ...pp_item,
+            numberOfUnits: numberOfUnits,
+        }
+    });
+
+    updateCart();    
+}
+
+//🍀renderSubtotal 
+function renderSubtotal(params) {
+
+
     
 }

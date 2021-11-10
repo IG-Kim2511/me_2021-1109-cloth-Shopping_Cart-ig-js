@@ -20,8 +20,7 @@ const products = [
       name: "T-shirt 3",
       price: 19.99,
       instock: 10,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
+      description: "inventory : 10",
       imgSrc: "./img/Clothing-Fill-Color(3).png",
     },
     {
@@ -29,8 +28,7 @@ const products = [
       name: "T-shirt 4",
       price: 25.99,
       instock: 5,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
+      description: "inventory : 5",
       imgSrc: "./img/Clothing-Fill-Color(4).png",
     },
     {
@@ -38,8 +36,7 @@ const products = [
       name: "T-shirt 5",
       price: 29.99,
       instock: 4,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
+      description: "inventory : 4",
       imgSrc: "./img/Clothing-Fill-Color(5).png",
     },
     {
@@ -47,8 +44,7 @@ const products = [
       name: "T-shirt 6",
       price: 39.99,
       instock: 7,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
+      description: "inventory : 7",
       imgSrc: "./img/Clothing-Fill-Color(6).png",
     },
   ];
