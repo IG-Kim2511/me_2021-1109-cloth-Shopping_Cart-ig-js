@@ -11,7 +11,7 @@ const totalItemsInCartEl = document.querySelector('.total-items-in-cart');
 /* 
     products  : data.js 에서 가져온 variable
     innerHTML += 사용
-    onClick 사용
+    onClick 사용  - 🍖addToCart
 */
 
 function renderProducts() {
@@ -42,3 +42,29 @@ function renderProducts() {
 }
 
 renderProducts();
+
+
+// 🍀js1340.  Add to cart
+
+let cart =[];
+
+/* 
+some()
+🍖changeNumberOfUnits
+*/
+
+function addToCart(p_id) {
+    // check if product already exist in cart
+    if (cart.some((item) => item.id === p_id)) {
+        changeNumberOfUnits('plus',p_id)
+        
+    } else {
+        
+    }
+    
+}
+
+// 🍀changeNumberOfUnits
+function changeNumberOfUnits(params) {
+    
+}
