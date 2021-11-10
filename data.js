@@ -5,7 +5,7 @@ const products = [
       price: 29.99,
       instock: 9,
       description: "inventory : 9",
-      imgSrc: "./img/t1.png",
+      imgSrc: "./img/Clothing-Fill-Color(1).png",
     },
     {
       id: 1,
@@ -13,7 +13,7 @@ const products = [
       price: 24.99,
       instock: 8,
       description: "inventory : 8",
-      imgSrc: "./img/t2.png",
+      imgSrc: "./img/Clothing-Fill-Color(2).png",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const products = [
       instock: 10,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-      imgSrc: "./img/t3.png",
+      imgSrc: "./img/Clothing-Fill-Color(3).png",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const products = [
       instock: 5,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-      imgSrc: "./img/t4.png",
+      imgSrc: "./img/Clothing-Fill-Color(4).png",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const products = [
       instock: 4,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-      imgSrc: "./img/t5.png",
+      imgSrc: "./img/Clothing-Fill-Color(5).png",
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ const products = [
       instock: 7,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-      imgSrc: "./img/t6.png",
+      imgSrc: "./img/Clothing-Fill-Color(6).png",
     },
   ];
   
