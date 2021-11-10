@@ -55,14 +55,60 @@ some()
 
 function addToCart(p_id) {
     // check if product already exist in cart
-    if (cart.some((item) => item.id === p_id)) {
+    if (cart.some((pp_item) => pp_item.id === p_id)) {
+
         changeNumberOfUnits('plus',p_id)
         
     } else {
-        
+        const item = products.find((pp_product) => pp_product.id === p_id);
+
+        cart.push(
+            {
+                ...item,
+                numberOfUnits: 1,
+            }
+        );
     }
+
+    updateCart();
     
 }
+
+
+// 🍀update Cart
+
+function updateCart() {
+    renderCartItems();
+    
+}
+
+// 🍀renderCartItems
+
+function renderCartItems() {
+    cartItemsEl.innerHTML="";
+    cart.forEach((pp_item)=>{
+        cartItemsEl.innerHTML += `
+            <div class="cart-item">
+            <div class="item-info" onclick="removeItemFromCart(${pp_item.id})">
+                <img src="${pp_item.imgSrc}" alt="${pp_item.name}">
+                <h4>${pp_item.name}</h4>
+            </div>
+            <div class="unit-price">
+                <small>$</small>${pp_item.price}
+            </div>
+            <div class="units">
+                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${pp_item.id})">-</div>
+                <div class="number">${pp_item.numberOfUnits}</div>
+                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})">+</div>           
+            </div>
+        </div>
+        
+        `
+    });
+
+    
+}
+
 
 // 🍀changeNumberOfUnits
 function changeNumberOfUnits(params) {
