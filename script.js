@@ -134,26 +134,25 @@ function renderCartItems() {
 
 20.다르면 return : 바뀌지않은 이전 numberOfUnit그대로 유지
 */
-function changeNumberOfUnits(p_action,p_id) {
-    cart = cart.map((pp_item)=>{
-        let numberOfUnits = pp_item.numberOfUnits;
+function changeNumberOfUnits(action, id) {
+  cart = cart.map((item) => {
+    let numberOfUnits = item.numberOfUnits;
 
-        if (pp_item === p_id) {
-            if (p_action === "minus" && numberOfUnits > 1) {
-                numberOfUnits--;
-                
-            } else if (p_action === "plus" && numberOfUnits < pp_item.instock) {
-                numberOfUnits++;                
-            }
-        }
+    if (item.id === id) {
+      if (action === "minus" && numberOfUnits > 1) {
+        numberOfUnits--;
+      } else if (action === "plus" && numberOfUnits < item.instock) {
+        numberOfUnits++;
+      }
+    }
 
-        return {
-            ...pp_item,
-            numberOfUnits: numberOfUnits,
-        }
-    });
+    return {
+      ...item,
+      numberOfUnits,
+    };
+  });
 
-    updateCart();    
+  updateCart();
 }
 
 //🍀renderSubtotal 
