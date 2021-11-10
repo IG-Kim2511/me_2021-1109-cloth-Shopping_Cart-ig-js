@@ -156,7 +156,7 @@ function changeNumberOfUnits(p_action,p_id) {
     updateCart();    
 }
 
-//🍀renderSubtotal
+//🍀renderSubtotal 
 function renderSubtotal(params) {
 
 
