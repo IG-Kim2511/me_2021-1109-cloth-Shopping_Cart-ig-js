@@ -99,6 +99,7 @@ function updateCart() {
 // 🍀renderCartItems :  cart에 아이템 render
 /* 
 onclick "changeNumberOfUnits" - 🍖js2830
+onclick "removeItemFromCart" - 🍖js
 */
 
 function renderCartItems() {
