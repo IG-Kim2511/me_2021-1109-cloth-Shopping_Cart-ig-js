@@ -82,6 +82,9 @@ a {
 
 .myBtn {
 	/* box-shadow:inset 0px 39px 0px -24px #e67a73; */
+
+    width: 100%;
+    
 	background-color:#e4685d;
 	border-radius:4px;
 	border:1px solid #ffffff;
