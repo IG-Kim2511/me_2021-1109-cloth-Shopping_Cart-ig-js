@@ -44,6 +44,14 @@ function renderProducts() {
 renderProducts();
 
 
+// 🍖js13, 
+// let cart =[];
+
+// 🍖js45-30,-40,-50,-60
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
+
+
 // 🍀js13.  Add to cart
 
 /* 🍄js13
@@ -64,7 +72,6 @@ array.some() : array에 조건에 맞는게 있으면 true..return함
 
 */
 
-let cart =[];
 
 function addToCart(p_id) {
     
@@ -89,10 +96,30 @@ function addToCart(p_id) {
 
 
 // 🍀js13-40.update Cart
+// 🍀js45. localStorage. save cart to local  storage
+/* 🍄js45. 
+
+    10. localStorage.setItem : update할때마다 local에 저장 
+
+    20. JSON.stringify(): array -> json으로 저장
+
+    30. localStorage.getItem : local에서 pull
+
+    40. json.parse.. : array로 만듬
+
+    50 updadeCart호출... -> renderCartItems에 적용
+
+    60.  || []; 추가 : 첫 화면의 empty array에서도 실행되게...
+
+*/
 
 function updateCart() {
     renderCartItems();
     renderSubtotal();
+
+    // js 45-10, js45-20
+    // localStorage.setItem('CART',cart);
+    localStorage.setItem('CART',JSON.stringify(cart));
     
 }
 
@@ -207,3 +234,21 @@ function removeItemFromCart(p_id) {
 
     updateCart();    
 }
+
+
+
+//🍀  localStorage.clear(); /  location.reload();    
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+const checkoutBtn = document.querySelector('.checkoutBtn');
+
+deleteAllBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+});
+
+checkoutBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+    alert("Thank you")
+});
+
