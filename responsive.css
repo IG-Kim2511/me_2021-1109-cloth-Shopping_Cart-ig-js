@@ -33,11 +33,6 @@
     
   /* @ 1200px */
   @media (max-width: 1200px) {
-    
-    .app-bg .left-side {
-        background-color: yellow;
-        }
-
 
     .products img {
         width: 150px;
@@ -66,6 +61,7 @@
     
     .myBtn {   
         font-size: 0.8rem;
+        padding:6px 45px;
     }
 
     .cart-footer div {
@@ -76,18 +72,37 @@
   /* @ 768px */
   @media (max-width: 768px) {
   
-    .app-bg .left-side {
-        background-color: blue;
-        }
+    .products img {
+        width: 100px;
+        
+    }
 
-  }
-  
-  /* @ 576px */
-  @media (max-width: 576px) {
-  
-    .app-bg .left-side {
-        background-color: violet;
-        }
+    .products .item .item-container {
+        width: 100px;   
+    }
 
-  }
+    .products .item .item-container .desc h2{
+        font-size: 0.8rem;
+    }
+
+    .cart-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-item .units {
+        display: flexbox;
+        flex-direction: row;
+    }
+    
+    .myBtn {   
+        font-size: 0.8rem;
+        padding:6px;
+    }
+
+    .cart-footer div {
+        font-size: 1rem;
+    }
+    }
+
   
