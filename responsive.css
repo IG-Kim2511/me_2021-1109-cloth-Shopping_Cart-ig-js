@@ -1,0 +1,108 @@
+  /* 🍀 [responsive] for below 768px screen width */
+  
+  /*🚀 breakpoint
+  1200px : pc⚡
+  992px : Tablet  ⚡⚡⚡기준
+  (768px : Tablet or phone)
+  576px : phone⚡
+  */
+  
+  /* me : 
+  992px : Tablet 기준으로 작업하고, 
+  576px: phone - responsive 추가
+  1200px : pc- responsive 추가
+  
+  (1200px : pc  
+  @media (min-width: 1200px) {  
+    max-width: 1200px
+    margin: auto;
+  */
+  
+/* @ 1850px */
+@media (max-width: 1850px) {
+  
+
+    .cart-item .item-info {
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    }
+
+    
+  /* @ 1200px */
+  @media (max-width: 1200px) {
+
+    .products img {
+        width: 150px;
+        
+    }
+
+    .products .item .item-container {
+        width: 150px;   
+    }
+
+    .products .item .item-container .desc h2{
+        font-size: 1rem;
+    }
+
+
+    .cart-item .item-info {
+ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-item .units {
+        display: flexbox;
+        flex-direction: column;
+    }
+    
+    .myBtn {   
+        font-size: 0.8rem;
+        padding:6px 45px;
+    }
+
+    .cart-footer div {
+        font-size: 1rem;
+    }
+  }
+
+  /* @ 768px */
+  @media (max-width: 768px) {
+  
+    .products img {
+        width: 100px;
+        
+    }
+
+    .products .item .item-container {
+        width: 100px;   
+    }
+
+    .products .item .item-container .desc h2{
+        font-size: 0.8rem;
+    }
+
+    .cart-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-item .units {
+        display: flexbox;
+        flex-direction: row;
+    }
+    
+    .myBtn {   
+        font-size: 0.8rem;
+        padding:6px;
+    }
+
+    .cart-footer div {
+        font-size: 1rem;
+    }
+    }
+
+  
