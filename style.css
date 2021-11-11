@@ -80,6 +80,29 @@ a {
     height: 100%;
 }
 
+.myBtn {
+	/* box-shadow:inset 0px 39px 0px -24px #e67a73; */
+	background-color:#e4685d;
+	border-radius:4px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 1.3rem;
+	padding:6px 65px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.myBtn:hover {
+	background-color:#eb675e;
+}
+.myBtn:active {
+	position:relative;
+	top:1px;
+}      
+
+
 /* HEADER */
 
 header {
@@ -405,29 +428,7 @@ header nav ul li {
     cursor: pointer;
 } */
 
-.cart-footer .delete-all-btn {
-	/* box-shadow:inset 0px 39px 0px -24px #e67a73; */
-	background-color:#e4685d;
-	border-radius:4px;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size: 1.3rem;
-	padding:6px 65px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
-}
-.cart-footer .delete-all-btn:hover {
-	background-color:#eb675e;
-}
-.cart-footer .delete-all-btn:active {
-	position:relative;
-	top:1px;
-}
-
-        
+  
 
 .cart-footer .subtotal {
     background-color: white;

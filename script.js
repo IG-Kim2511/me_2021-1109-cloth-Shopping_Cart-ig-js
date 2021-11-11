@@ -234,3 +234,13 @@ function removeItemFromCart(p_id) {
 
     updateCart();    
 }
+
+
+
+//🍀  localStorage.clear(); /  location.reload();    
+const deleteAllBtn = document.querySelector('.delete-all-btn');
+
+deleteAllBtn.addEventListener('click',()=>{
+    localStorage.clear();
+    location.reload();    
+});
