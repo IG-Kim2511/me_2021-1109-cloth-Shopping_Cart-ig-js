@@ -103,6 +103,10 @@
     .cart-footer div {
         font-size: 1rem;
     }
+
+    .shopping-bag img{
+        display: none;
     }
+}
 
   
