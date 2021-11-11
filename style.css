@@ -207,7 +207,7 @@ header nav ul li {
     display: flex;
 }
 
-/* PRODUCTS */
+/* 🍖js09. PRODUCTS */
 .products {
     height: 100%;
     width: 75%;
@@ -301,7 +301,8 @@ header nav ul li {
 
     padding: 5px;
 }
-/* CART */
+
+/*🍖js13 CART */
 .cart {
     height: 100%;
     width: 25%;
