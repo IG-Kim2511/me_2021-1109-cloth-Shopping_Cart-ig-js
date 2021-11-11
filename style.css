@@ -11,7 +11,7 @@
     --color-10-dark: #01111a;
   
     --color-20: #98C8D7;
-    
+
     --color-30: #446df6;
   
     --color-40: #33ca7f;
@@ -42,7 +42,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--link-color);
 }
 
 /*   */
@@ -172,7 +172,7 @@ header nav ul li {
     margin: 10px 0;
 }
 .more-details .description h1 small {
-    color: #000;
+    color: var(--link-color);
 }
 /* MODEL */
 .model {
@@ -231,7 +231,7 @@ header nav ul li {
 .products .item .item-container {
     width: 250px;
     height: 90%;
-    background-color: #000;
+    background-color: var(--link-color);
 
     border-radius: 25px;
 
@@ -243,7 +243,7 @@ header nav ul li {
 
     background-color: white;
 
-    border: 1px solid #000;
+    border: 1px solid var(--link-color);
     border-radius: 25px 25px 0 0;
 
     display: flex;
@@ -386,7 +386,7 @@ header nav ul li {
     bottom: 0;
     left: 0;
 
-    border-left: 1px solid rgb(var(--right-side-bg-color));
+    border-left: 1px solid var(--right-side-bg-color);
 }
 .cart-footer div {
     display: flex;
@@ -427,8 +427,6 @@ header nav ul li {
 }
 
         
-
-
 
 .cart-footer .subtotal {
     background-color: white;
