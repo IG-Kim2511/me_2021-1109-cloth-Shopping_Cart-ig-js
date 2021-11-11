@@ -430,11 +430,6 @@ header nav ul li {
 
   
 
-.cart-footer .subtotal {
-    background-color: white;
-}
-.cart-footer .checkout {
+.cart-footer .subtotal {    
     background-color: var(--color-20);
-
-    cursor: pointer;
 }
