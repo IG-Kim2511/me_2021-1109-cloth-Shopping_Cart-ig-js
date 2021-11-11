@@ -169,6 +169,10 @@ function changeNumberOfUnits(action, id) {
 30 price * number of units 하면 자동으로 계산이 됨 
 */
 
+/* 🦄
+.toFixed(2)
+*/
+
 function renderSubtotal() {
     let totalPrice = 0;
     let totalItems = 0;
