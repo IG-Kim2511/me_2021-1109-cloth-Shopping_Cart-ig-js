@@ -150,7 +150,7 @@ function changeNumberOfUnits(action, id) {
     return {
       ...item,
 
-      numberOfUnits: numberOfUnits,
+      numberOfUnits: numberOfUnits, /* 🍖js3510. */
     //   numberOfUnits,
     };
   });
@@ -158,9 +158,27 @@ function changeNumberOfUnits(action, id) {
   updateCart();
 }
 
-//🍀js3510. renderSubtotal ............................🍚
-function renderSubtotal(params) {
+//🦄 🍀js3510. calculate, renderSubtotal 
 
+/*🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
 
-    
+10. price (products.js의 오브젝트)
+
+20. number of units 를 동적으로 products.js의 오브젝트 목록에 넣음
+
+30 price * number of units 하면 자동으로 계산이 됨 
+*/
+
+function renderSubtotal() {
+    let totalPrice = 0;
+    let totalItems = 0;
+
+    cart.forEach((pp_item)=>{
+        totalPrice += pp_item.price * pp_item.numberOfUnits;
+        totalItems += pp_item.numberOfUnits;
+    });
+
+    // subtotalEl.innerHTML =  `Subtotal (0 items): $0`;
+    subtotalEl.innerHTML =  `Subtotal (${totalItems} items): $ ${totalPrice.toFixed(2)}`;
+    totalItemsInCartEl.innerHTML= totalItems;    
 }
