@@ -6,7 +6,7 @@ const subtotalEl = document.querySelector('.subtotal')
 const totalItemsInCartEl = document.querySelector('.total-items-in-cart');
 
 
-// 🍀js0903. Render products . 시작하자마자 아이템목록 render하기
+// 🍀js09. Render products . 시작하자마자 아이템목록 render하기
 
 /* 
     products  : products.js 에서 가져온 variable
@@ -44,9 +44,9 @@ function renderProducts() {
 renderProducts();
 
 
-// 🍀js1340.  Add to cart
+// 🍀js13.  Add to cart
 
-/* 🍄js1340
+/* 🍄js13
 10. 빈 array ...variable 만듬 ->  let cart 
 
 20. click한 아이템id === products.js파일의 id 다르면, cart화면에 추가
@@ -68,11 +68,11 @@ let cart =[];
 
 function addToCart(p_id) {
     
-    // 🍉js1340-30
+    // 🍉js13-30
     if (cart.some((pp_item) => pp_item.id === p_id)) {
         changeNumberOfUnits('plus',p_id)        
     } 
-    // 🍉js1340-20
+    // 🍉js13-20
     else {
         const item = products.find((pp_product) => pp_product.id === p_id);
 
@@ -88,7 +88,7 @@ function addToCart(p_id) {
 }
 
 
-// 🍀update Cart
+// 🍀js13-40.update Cart
 
 function updateCart() {
     renderCartItems();
@@ -96,10 +96,11 @@ function updateCart() {
     
 }
 
-// 🍀renderCartItems :  cart에 아이템 render
-/* 
-onclick "changeNumberOfUnits" - 🍖js2830
-onclick "removeItemFromCart" - 🍖js
+// 🍀js13-40. renderCartItems :  cart에 아이템 render
+
+/* 🍄
+onclick "changeNumberOfUnits" - 🍖js28
+onclick "removeItemFromCart" - 🍖js41
 */
 
 function renderCartItems() {
@@ -125,7 +126,7 @@ function renderCartItems() {
     });
 }
 
-// 🍀js2830. + - 버튼 클릭한때, change Number Of Units, 
+// 🍀js28. + - 버튼 클릭한때, change Number Of Units, 
 /* 🍄
 10. cart 안의 item.id === onclick으로 넘어온 id가 같다면...함수실행
 
@@ -158,7 +159,7 @@ function changeNumberOfUnits(action, id) {
   updateCart();
 }
 
-//🦄 🍀js3510. calculate, renderSubtotal 
+//🦄 🍀js35. calculate, renderSubtotal 
 
 /*🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
 
@@ -167,6 +168,10 @@ function changeNumberOfUnits(action, id) {
 20. number of units 를 동적으로 products.js의 오브젝트 목록에 넣음
 
 30 price * number of units 하면 자동으로 계산이 됨 
+*/
+
+/* 🦄
+.toFixed(2)
 */
 
 function renderSubtotal() {
@@ -181,4 +186,24 @@ function renderSubtotal() {
     // subtotalEl.innerHTML =  `Subtotal (0 items): $0`;
     subtotalEl.innerHTML =  `Subtotal (${totalItems} items): $ ${totalPrice.toFixed(2)}`;
     totalItemsInCartEl.innerHTML= totalItems;    
+}
+
+
+// js41. remove item from cart
+/* 🍄
+  10. render html에서... onclick="removeItemFromCart(${pp_item.id})" 가져옴
+
+  20. filter... cart안의 아이템들 id - onclick에서 가져온 id 비교
+
+  20-2. 서로 다른것만 filter해서 cart array 다시 만듬 
+  
+  20-4.(서로 같으면 새로운 cart array에서 filter로 걸러져서 제외됨)
+*/
+
+// 🦄array.filter( ~~ => ~~~)
+
+function removeItemFromCart(p_id) {
+    cart = cart.filter (pp_item => pp_item.id !==p_id);
+
+    updateCart();    
 }
