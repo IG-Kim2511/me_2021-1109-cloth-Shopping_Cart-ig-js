@@ -44,11 +44,12 @@ function renderProducts() {
 renderProducts();
 
 
-// 🍖js13, 🍖js45-30,-40,-50
+// 🍖js13, 
 // let cart =[];
+
+// 🍖js45-30,-40,-50,-60
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
-
 
 
 // 🍀js13.  Add to cart
@@ -107,6 +108,8 @@ function addToCart(p_id) {
     40. json.parse.. : array로 만듬
 
     50 updadeCart호출... -> renderCartItems에 적용
+
+    60.  || []; 추가 : 첫 화면의 empty array에서도 실행되게...
 
 */
 
