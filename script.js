@@ -99,6 +99,7 @@ function updateCart() {
 // 🍀renderCartItems :  cart에 아이템 render
 /* 
 onclick "changeNumberOfUnits" - 🍖js2830
+onclick "removeItemFromCart" - 🍖js
 */
 
 function renderCartItems() {
@@ -132,7 +133,7 @@ function renderCartItems() {
 
  10-20. plus + instock보다 작을때에만 적용
 
-20.다르면 return : 바뀌지않은 이전 numberOfUnit그대로 유지
+20.다르면 return : 바뀌지않은 이전 numberOfUnit 넣음. = 그대로 유지
 */
 function changeNumberOfUnits(action, id) {
   cart = cart.map((item) => {
@@ -148,14 +149,16 @@ function changeNumberOfUnits(action, id) {
 
     return {
       ...item,
-      numberOfUnits,
+
+      numberOfUnits: numberOfUnits,
+    //   numberOfUnits,
     };
   });
 
   updateCart();
 }
 
-//🍀renderSubtotal 
+//🍀js3510. renderSubtotal ............................🍚
 function renderSubtotal(params) {
 
 
