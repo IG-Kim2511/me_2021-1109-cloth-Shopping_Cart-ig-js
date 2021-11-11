@@ -1,0 +1,57 @@
+  /* 🍀 [responsive] for below 768px screen width */
+  
+  /*🚀 breakpoint
+  1200px : pc⚡
+  992px : Tablet  ⚡⚡⚡기준
+  (768px : Tablet or phone)
+  576px : phone⚡
+  */
+  
+  /* me : 
+  992px : Tablet 기준으로 작업하고, 
+  576px: phone - responsive 추가
+  1200px : pc- responsive 추가
+  
+  (1200px : pc  
+  @media (min-width: 1200px) {  
+    max-width: 1200px
+    margin: auto;
+  */
+  
+  /* @ 1200px */
+  @media (max-width: 1200px) {
+    
+    .app-bg .left-side {
+        background-color: yellow;
+        }
+
+
+    .products img {
+        width: 150px;
+        
+    }
+
+    .products .item .item-container {
+        width: 200px;   
+    }
+
+  }
+
+  /* @ 768px */
+  @media (max-width: 768px) {
+  
+    .app-bg .left-side {
+        background-color: blue;
+        }
+
+  }
+  
+  /* @ 576px */
+  @media (max-width: 576px) {
+  
+    .app-bg .left-side {
+        background-color: violet;
+        }
+
+  }
+  
