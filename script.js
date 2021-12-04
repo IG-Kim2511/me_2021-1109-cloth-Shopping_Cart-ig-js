@@ -11,7 +11,10 @@ const totalItemsInCartEl = document.querySelector('.total-items-in-cart');
 /* 
     products  : products.js 에서 가져온 variable
     innerHTML += 사용
-    onClick 사용  - 🍖addToCart
+  
+  🦄onClick 사용  - 🍖addToCart
+    JS로 rendering한 element에 variable할 수 없음..
+    rendering할때, onClick 넣으면 간단함!!
 */
 
 function renderProducts() {
