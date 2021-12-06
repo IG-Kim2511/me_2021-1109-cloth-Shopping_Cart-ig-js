@@ -13,7 +13,7 @@ const totalItemsInCartEl = document.querySelector('.total-items-in-cart');
     innerHTML += 사용
   
   🦄onClick 사용  - 🍖addToCart
-    JS로 rendering한 element에 variable할 수 없음..
+    JS로 rendering한 element에 variable할 수 없을 때..
     rendering할때, onClick 넣으면 간단함!!
 */
 
@@ -53,6 +53,12 @@ updateCart();
 
 
 // 🍀js13.  Add to cart
+
+/* 
+🦄object....ID  찾아서 전체 목록 불러오기
+
+object.find((~)=>{~})
+*/
 
 /* 🍄js13
 10. 빈 array ...variable 만듬 ->  let cart 
@@ -188,7 +194,8 @@ function changeNumberOfUnits(action, id) {
 
 //🦄 🍀js35. calculate, renderSubtotal 
 
-/*🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
+/*
+🦄 🍄 calculate - add, remove 모두 한번에 간단하게!!!
 
 10. price (products.js의 오브젝트)
 
