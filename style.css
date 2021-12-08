@@ -46,11 +46,6 @@ a {
 }
 
 /*   */
-.app-container {
-    width: 100vw;
-    height: 100vh;
-}
-  
 
 .world {
     width: 100vw;
@@ -70,7 +65,7 @@ a {
 
 .app-bg .left-side {
     background-color: var(--bg-color);
-    width: 75%;
+    width: 75%;     /* css10 */
     height: 100%;    
 }
 
@@ -161,7 +156,7 @@ header nav ul li {
 /* 🍖js09. PRODUCTS */
 .products {
     height: 100%;
-    width: 75%;
+    width: 75%;     /* css10 */
 
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -297,7 +292,7 @@ header nav ul li {
     cursor: pointer;
 }
 .cart-item .item-info img {
-    width: 75px;
+    width: 75px;        
 }
 /* unit price */
 .cart-item .unit-price {

@@ -44,7 +44,7 @@ function renderProducts() {
 renderProducts();
 
 
-// 🍖js13, 
+// 🍖js13-20, 
 // let cart =[];
 
 // 🍖js45-30,-40,-50,-60
@@ -97,6 +97,7 @@ function addToCart(p_id) {
         );
     }
 
+    console.log(cart)
     updateCart();    
 }
 
