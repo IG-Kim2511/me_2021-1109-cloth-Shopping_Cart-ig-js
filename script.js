@@ -6,13 +6,16 @@ const subtotalEl = document.querySelector('.subtotal')
 const totalItemsInCartEl = document.querySelector('.total-items-in-cart');
 
 
+//products.js 에서 가져온 data확인
+console.log(products)
+
 // 🍀js09. Render products . 시작하자마자 아이템목록 render하기
 
 /* 
     products  : products.js 에서 가져온 variable
     innerHTML += 사용
   
-  🦄onClick 사용  - 🍖addToCart
+  🦄onClick 사용  - 🍖js13, addToCart
     JS로 rendering한 element에 variable할 수 없을 때..
     rendering할때, onClick 넣으면 간단함!!
 */
@@ -44,7 +47,7 @@ function renderProducts() {
 renderProducts();
 
 
-// 🍖js13-20, 
+// 🍉js13-10, 🍖js13-20, 
 // let cart =[];
 
 // 🍖js45-30,-40,-50,-60
@@ -52,32 +55,40 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
 
-// 🍀js13.  Add to cart
+// 🍀js13. Add to cart
 
 /* 
-🦄object....ID  찾아서 전체 목록 불러오기
+🦄object....ID 찾아서 전체 목록 불러오기
 
 object.find((~)=>{~})
+*/
+
+/* 
+🦄array 문법... objectArray에 사용 가능함
+
+Ok : objectArray.find((~)=> ~ === ~ )
+
+x : objectArray.find((~)=> { ~ === ~ } )
 */
 
 /* 🍄js13
 10. 빈 array ...variable 만듬 ->  let cart 
 
-20. click한 아이템id === products.js파일의 id 다르면, cart화면에 추가
+20. click한 아이템id !== products.js파일의 id 다르면, cart화면에 추가
 array.find() : array에서 조건에 맞는것을 찾음
 
 find..찾아낸 object ->  const item
 ...spread operator
-product.js의 오브젝트 목록에 numberOfUnits:1 추가 (첫번째 아이템...)
+products.js의 오브젝트 목록에 numberOfUnits:1 추가 (첫번째 아이템...)
 
-30. click한 아이템id === products.js파일의 id 같으면, cart화면에 추가 x... 수량 up
+30. click한 아이템id === products.js파일의 id 같으면, cart화면에 추가 x... 수량 up & down
+->🍖js28. changeNumberOfUnits함수 실행
+
 array.some() : array에 조건에 맞는게 있으면 true..return함
-🍖changeNumberOfUnits
+->🍖js09. onClick
 
 40. -> updateCart -> renderCartItems : cart에 아이템 render
-
 */
-
 
 function addToCart(p_id) {
     
