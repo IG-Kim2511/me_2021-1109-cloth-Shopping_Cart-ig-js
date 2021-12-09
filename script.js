@@ -100,6 +100,7 @@ function addToCart(p_id) {
     else {
         const item = products.find((pp_product) => pp_product.id === p_id);
 
+        // cart.push(item);
         cart.push(
             {
                 ...item,
@@ -107,7 +108,6 @@ function addToCart(p_id) {
             }
         );
     }
-
     console.log(cart)
     updateCart();    
 }
@@ -128,7 +128,6 @@ function addToCart(p_id) {
     50 updadeCart호출... -> renderCartItems에 적용
 
     60.  || []; 추가 : 첫 화면의 empty array에서도 실행되게...
-
 */
 
 function updateCart() {
@@ -172,6 +171,13 @@ function renderCartItems() {
 }
 
 // 🍀js28. + - 버튼 클릭한때, change Number Of Units, 
+
+/* 🦄
+return { ~ } 형식 가능함
+
+action, id...2개의 parameter 가져와서 사용하는 알고리즘
+*/
+
 /* 🍄
 10. cart 안의 item.id === onclick으로 넘어온 id가 같다면...함수실행
 
@@ -179,8 +185,9 @@ function renderCartItems() {
 
  10-20. plus + instock보다 작을때에만 적용
 
-20.다르면 return : 바뀌지않은 이전 numberOfUnit 넣음. = 그대로 유지
+20. cart 안의 item.id !== onclick으로 넘어온 id가 다르면... return : 바뀌지않은 이전 numberOfUnit 넣음. = 그대로 유지 (새 item... cart 칸에 추가)
 */
+
 function changeNumberOfUnits(action, id) {
   cart = cart.map((item) => {
     let numberOfUnits = item.numberOfUnits;
