@@ -177,7 +177,8 @@ header nav ul li {
 .products .item .item-container {
     width: 250px;
     height: 90%;
-    background-color: var(--link-color);
+    background-color: var(--color-20);
+    border: 1px solid var(--link-color);
 
     border-radius: 25px;
 

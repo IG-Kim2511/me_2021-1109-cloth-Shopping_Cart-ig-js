@@ -227,6 +227,7 @@ function changeNumberOfUnits(action, id) {
 .toFixed(2)
 */
 
+
 function renderSubtotal() {
     let totalPrice = 0;
     let totalItems = 0;
@@ -244,6 +245,8 @@ function renderSubtotal() {
 
 // js41. remove item from cart
 /* 🍄
+  05. remove item을 제외한 새로운 object-array 만듬
+
   10. render html에서... onclick="removeItemFromCart(${pp_item.id})" 가져옴
 
   20. filter... cart안의 아이템들 id - onclick에서 가져온 id 비교
@@ -256,7 +259,7 @@ function renderSubtotal() {
 // 🦄array.filter( ~~ => ~~~)
 
 function removeItemFromCart(p_id) {
-    cart = cart.filter (pp_item => pp_item.id !==p_id);
+    cart = cart.filter (pp_item => pp_item.id !== p_id);
 
     updateCart();    
 }
@@ -264,6 +267,8 @@ function removeItemFromCart(p_id) {
 
 
 //🍀  localStorage.clear(); /  location.reload();    
+// 🍖js13-10,
+
 const deleteAllBtn = document.querySelector('.delete-all-btn');
 const checkoutBtn = document.querySelector('.checkoutBtn');
 
@@ -275,6 +280,8 @@ deleteAllBtn.addEventListener('click',()=>{
 checkoutBtn.addEventListener('click',()=>{
     localStorage.clear();
     location.reload();    
-    alert("Thank you")
+   
+    alert(`Thank you`);
+
 });
 
