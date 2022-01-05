@@ -6,6 +6,7 @@ const products = [
       instock: 9,
       description: "inventory : 9",
       imgSrc: "./img/Clothing-Fill-Color(1).png",
+      //🍖js33. numberOfUnits:1
     },
     {
       id: 1,
