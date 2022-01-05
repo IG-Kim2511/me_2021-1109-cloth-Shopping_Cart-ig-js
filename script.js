@@ -19,7 +19,8 @@ console.log(products)
     JS로 rendering한 element에 variable할 수 없을 때..
     rendering할때, onClick 넣으면 간단함!!
 */
-
+   
+renderProducts();
 function renderProducts() {
     products.forEach((p_product)=>{
         productsEl.innerHTML += `
@@ -44,18 +45,17 @@ function renderProducts() {
     });    
 }
 
-renderProducts();
 
+
+
+// 🍀js13. Add to cart
 
 // 🍉js13-10, 🍖js13-20, 
 // let cart =[];
 
-// 🍖js45-30,-40,-50,-60
+// 🍖js45-30,-40,-50,-60, localStorage
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
-
-
-// 🍀js13. Add to cart
 
 /* 
 🦄object....ID 찾아서 전체 목록 불러오기
