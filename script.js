@@ -94,7 +94,7 @@ function addToCart(p_id) {
     
     // 🍉js13-30
     if (cart.some((pp_item) => pp_item.id === p_id)) {
-        changeNumberOfUnits('plus',p_id)        
+        changeNumberOfUnits('plus',p_id)     /* js28 */   
     } 
     // 🍉js13-20
     else {
@@ -134,7 +134,7 @@ function updateCart() {
     renderCartItems();
     renderSubtotal();
 
-    // js 45-10, js45-20
+    // 🍉js 45-10, js45-20
     // localStorage.setItem('CART',cart);
     localStorage.setItem('CART',JSON.stringify(cart));
     
@@ -143,12 +143,14 @@ function updateCart() {
 // 🍀js13-40. renderCartItems :  cart에 아이템 render
 
 /* 🍄
-onclick "changeNumberOfUnits" - 🍖js28
-onclick "removeItemFromCart" - 🍖js41
+    onclick "changeNumberOfUnits" - 🍖js28
+    onclick "removeItemFromCart" - 🍖js41
 */
 
 function renderCartItems() {
-    cartItemsEl.innerHTML=""; /* 클릭할때마다 초기화 */
+   
+    /* 클릭할때마다 초기화 (초기화안하면, + - 할때,  이전목록도 같이 render됨)*/
+    cartItemsEl.innerHTML=""; 
 
     cart.forEach((pp_item)=>{
         cartItemsEl.innerHTML += `
@@ -159,6 +161,7 @@ function renderCartItems() {
             </div>
             <div class="unit-price">
                 <small>$</small>${pp_item.price}
+                <img src="./img/icons8-delete-128.png" alt="" class="delete"  onclick="removeItemFromCart(${pp_item.id})">
             </div>
             <div class="units">
                 <div class="btn plus" onclick="changeNumberOfUnits('plus', ${pp_item.id})">+</div>           
@@ -243,7 +246,7 @@ function renderSubtotal() {
 }
 
 
-// js41. remove item from cart
+// 🍀js41. remove item from cart
 /* 🍄
   05. remove item을 제외한 새로운 object-array 만듬
 
@@ -266,7 +269,7 @@ function removeItemFromCart(p_id) {
 
 
 
-//🍀  localStorage.clear(); /  location.reload();    
+//🍀localStorage.clear(); /  location.reload();    
 // 🍖js13-10,
 
 const deleteAllBtn = document.querySelector('.delete-all-btn');
