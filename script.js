@@ -98,7 +98,8 @@ function addToCart(p_id) {
     } 
     // 🍉js13-20
     else {
-        const item = products.find((pp_product) => pp_product.id === p_id);
+        // products : data.js에서 가져온 데이터
+        const item = products.find((product) => product.id === p_id);
 
         // cart.push(item);
         cart.push(
