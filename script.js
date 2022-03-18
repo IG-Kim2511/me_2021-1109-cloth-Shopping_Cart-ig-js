@@ -12,13 +12,15 @@ console.log(products)
 // 🍀js09. Render products . 시작하자마자 아이템목록 render하기
 
 /* 
-    products  : products.js 에서 가져온 variable
-    innerHTML += 사용
+  🦄productsData  : products.js 에서 가져온 variable
+    
+  🦄innerHTML += 사용
   
-  🦄onClick 사용  - 🍖js13, addToCart
+  🦄onClick 사용  - 🥒js13, addToCart
     JS로 rendering한 element에 variable할 수 없을 때..
-    rendering할때, onClick 넣으면 간단함!!
+    rendering할때, onClick 넣으면 간단함!!    
 */
+
    
 renderProducts();
 function renderProducts() {
@@ -55,39 +57,39 @@ function renderProducts() {
 
 // 🍖js45-30,-40,-50,-60, localStorage
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
-updateCart();
+
 
 /* 
-🦄object....ID 찾아서 전체 목록 불러오기
+    🦄object....ID 찾아서 전체 목록 불러오기
 
-object.find((~)=>{~})
+    object.find((~)=>{~})
 */
 
 /* 
-🦄array 문법... objectArray에 사용 가능함
+    🦄array 문법... objectArray에 사용 가능함
 
-Ok : objectArray.find((~)=> ~ === ~ )
+    Ok : objectArray.find((~)=> ~ === ~ )
 
-x : objectArray.find((~)=> { ~ === ~ } )
+    x : objectArray.find((~)=> { ~ === ~ } )
 */
 
 /* 🍄js13
-10. 빈 array ...variable 만듬 ->  let cart 
+    10. 빈 array ...variable 만듬 ->  let cart 
 
-20. click한 아이템id !== products.js파일의 id 다르면, cart화면에 추가
-array.find() : array에서 조건에 맞는것을 찾음
+    20. click한 아이템id !== products.js파일의 id 다르면, cart화면에 추가
+    array.find() : array에서 조건에 맞는것을 찾음
 
-find..찾아낸 object ->  const item
-...spread operator
-products.js의 오브젝트 목록에 numberOfUnits:1 추가 (첫번째 아이템...)
+    find..찾아낸 object ->  const item
+    ...spread operator
+    products.js의 오브젝트 목록에 numberOfUnits:1 추가 (첫번째 아이템...)
 
-30. click한 아이템id === products.js파일의 id 같으면, cart화면에 추가 x... 수량 up & down
-->🍖js28. changeNumberOfUnits함수 실행
+    30. click한 아이템id === products.js파일의 id 같으면, cart화면에 추가 x... 수량 up & down
+    ->🍖js28. changeNumberOfUnits함수 실행
 
-array.some() : array에 조건에 맞는게 있으면 true..return함
-->🍖js09. onClick
+    array.some() : array에 조건에 맞는게 있으면 true..return함
+    ->🍖js09. onClick
 
-40. -> updateCart -> renderCartItems : cart에 아이템 render
+    40. -> updateCart -> renderCartItems : cart에 아이템 render
 */
 
 function addToCart(p_id) {
@@ -137,9 +139,9 @@ function updateCart() {
 
     // 🍉js 45-10, js45-20
     // localStorage.setItem('CART',cart);
-    localStorage.setItem('CART',JSON.stringify(cart));
-    
+    localStorage.setItem('CART',JSON.stringify(cart));    
 }
+updateCart();
 
 // 🍀js13-40. renderCartItems :  cart에 아이템 render
 
